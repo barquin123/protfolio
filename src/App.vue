@@ -7,14 +7,25 @@ import HelloWorld from './components/HelloWorld.vue'
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink class="navLinks" to="/">Home <span id="icons" class="hide">icon</span></RouterLink>
-        <RouterLink class="navLinks" to="/projects">Projects<span id="icons" class="hide">icon</span></RouterLink>
-        <RouterLink class="navLinks" to="/contact">Contact Me<span id="icons" class="hide">icon</span></RouterLink>
+        <RouterLink class="navLinks" to="/">Bios 
+          <!-- <span id="icons" class="hide"> -->
+            <!-- icon</span> -->
+          </RouterLink>
+        <RouterLink class="navLinks" to="/projects">Projects
+          <!-- <span id="icons" class="hide"> -->
+            <!-- icon</span> -->
+          </RouterLink>
+        <RouterLink class="navLinks" to="/contact">Contact Me
+          <!-- <span id="icons" class="hide"> -->
+            <!-- icon</span> -->
+          </RouterLink>
       </nav>
     </div>
   </header>
   <main>
+    <transition name="fade-slide" mode="in-out" >
     <RouterView />
+  </transition>
   </main>
 </template>
 
@@ -22,6 +33,9 @@ import HelloWorld from './components/HelloWorld.vue'
   main {
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
+    background-image: url('/src/assets/grid.svg');
+    background-size: auto;
   }
   .hide{
     display: block;
@@ -50,11 +64,23 @@ import HelloWorld from './components/HelloWorld.vue'
   .navLinks{
     position: relative;
   }
-  .navLinks:hover{
-    background: hsla(160, 100%, 37%);
+  .navLinks::before{
+    content: '';
+    background: #fff;
+    height: 1px;
+    width: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
   }
-  .navLinks.router-link-active{
+  .navLinks:hover::before{
+    width: 80%;
+  }
+  .navLinks.router-link-active::before{
     background: hsla(160, 100%, 37%);
+    width: 80%;
   }
   /* .navLinks.router-link-active::before{
     content: '';
@@ -67,4 +93,32 @@ import HelloWorld from './components/HelloWorld.vue'
     transition: all 0.3s ease-in-out;
     border-radius: 50%;
   } */
+  .fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.fade-slide-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.fade-slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(10px);
+}
+
+.fade-slide-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+  filter: blur(0px);
+}
 </style>

@@ -26,12 +26,13 @@ import socmed from '../components/HomeComponents/Socmed.vue'
     }
     .home > div {
       max-width: 45%;
-      max-height: 45%;
+      min-height: 45%;
       height: 100%;
       border: 0.01rem solid #333;
       width: 100%;
       padding: 1rem;
       border-radius: 25px;
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(5px);
+      height: auto;
     }
 </style>
