@@ -11,7 +11,7 @@
             </div>
         </div>
     <div class="profileDescripton">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ea nostrum veritatis cumque aperiam, porro, numquam aut quisquam incidunt dolor nobis quae deleniti! Laborum vel praesentium quam provident magni?</p>
+        <p>I'm a frontend web developer with a passion for coding, problem-solving, and building intuitive projects that simplify life—whether for myself or others. Aspiring to become a full-stack/software developer, I thrive on creating efficient and user-friendly digital solutions.</p>
     </div>
     </div>
 </template>

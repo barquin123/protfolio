@@ -1,30 +1,37 @@
 <script setup>
 
-import { ref } from "vue";
+import { ref, computed, defineEmits } from "vue";
 
 const compName = ref(null);
+const emit = defineEmits(['updateActiveState']);
 
 function compActive(name){
     compName.value = compName.value === name ? null : name;
 }
 
+const isAnyActive = computed(() => {
+    const activeState = !!compName.value;
+    emit('updateActiveState', activeState);
+    return activeState;
+});
+
 </script>
 
 <template>
-    <div class="experiences">
-        <h1 v-if="compName === 'insystic'">Insystic Inc.</h1>
+    <div :class="['experiences', { active: isAnyActive }]">
+        <h1 v-if="compName === 'insystic'">Insystic Corp.</h1>
         <h1 v-else-if="compName === 'proweaver'">ProWeaver Inc.</h1>
         <h1 v-else-if="compName === 'FDCI'">Forty Degrees Celcius Inc.</h1>
         <h1 v-else>Work Experiences</h1>
         <div class="TimeLine">
             <ul class="CompImages">
-                <li :class = "{active: compName === 'insystic', hidden: compName && compName !== 'insystic'}" @click="compActive('insystic')"><img src="https://placehold.co/50x50" alt="Insystec">
+                <li :class = "{active: compName === 'insystic', hidden: compName && compName !== 'insystic'}" @click="compActive('insystic')"><img src="/src/assets/INSYSTIC.webp" alt="Insystec">
                     <span>(Jul 2021 - jan 2022)</span>
                 </li>
-                <li :class = "{active: compName == 'proweaver', hidden: compName && compName !== 'proweaver'}" @click="compActive('proweaver')"><img src="https://placehold.co/50x50" alt="ProWeaver">
+                <li :class = "{active: compName == 'proweaver', hidden: compName && compName !== 'proweaver'}" @click="compActive('proweaver')"><img src="/src/assets/proweaver_logo.webp" alt="ProWeaver">
                     <span>(april 2022 - jan 2024)</span>
                 </li>
-                <li :class = "{active: compName == 'FDCI', hidden: compName && compName !== 'FDCI'}" @click="compActive('FDCI')"><img src="https://placehold.co/50x50" alt="Forty Degrees">
+                <li :class = "{active: compName == 'FDCI', hidden: compName && compName !== 'FDCI'}" @click="compActive('FDCI')"><img src="/src/assets/forty_degrees_celsius_inc_logo.webp" alt="Forty Degrees">
                     <span>(april 2024 - Present)</span>
                 </li>
             </ul>
@@ -70,10 +77,14 @@ li{
 }
 .CompImages img{
     border-radius: 50%;
-
+    max-width: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .CompImages li{
-    margin-top: 14px;
+    margin-top: 30px;
     position: relative;
     text-align: center;
     transition: opacity 0.5s ease;
@@ -91,12 +102,12 @@ li{
     top: 30px;
 }
 .CompImages li:nth-child(2) span{
-    top: -100px;
+    top: -110px;
 }
 .CompImages li::before{
     content: '';
     position: absolute;
-    top: 43%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 2px;
@@ -139,7 +150,8 @@ li{
     transition: all 0.5s ease;
 }
 
-.fade-enter-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease;
 }
 
@@ -153,7 +165,7 @@ li{
   filter: blur(0px);
 }
 
-/* .fade-leave-from {
+.fade-leave-from {
   opacity: 1;
   filter: blur(10px);
 }
@@ -161,10 +173,6 @@ li{
 .fade-leave-to {
   opacity: 0;
   filter: blur(0px);
-} */
-
-/* .fade-leave-active {
-  transition: opacity 0s ease;
-} */
+}
 
 </style>

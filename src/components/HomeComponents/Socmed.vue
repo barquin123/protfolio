@@ -7,13 +7,13 @@
             <h2>Socials</h2>
             <div class="socialsList">
                 <div class="social">
-                    <img src="https://placehold.co/80x80" alt="facebook">
+                    <a href="mailto:jay.barquin2000@gmail.com"><img src="/src/assets/Gmail-logo.webp" alt="gmail"></a>
                 </div>
                 <div class="social">
-                    <img src="https://placehold.co/80x80" alt="twitter">
+                    <a href="https://www.facebook.com/jay.barquin.12" target="_blank"><img src="/src/assets/Facebook_logo.webp" alt="fb"></a>
                 </div>
                 <div class="social">
-                    <img src="https://placehold.co/80x80" alt="instagram">
+                    <a href="https://www.linkedin.com/in/jay-frank-barquin-618192182/" target="_blank"><img src="/src/assets/linkedin.webp" alt="linkedin"></a>
                 </div>
             </div>
         </div>
@@ -21,22 +21,22 @@
             <h2>Tech Stack</h2>
             <div class="techStackList">
                 <div class="vue">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/logo.svg" alt="">
                 </div>
                 <div class="react">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/react-2.svg" alt="">
                 </div>
                 <div class="tailwind">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/tailwindcss-icon.svg" alt="">
                 </div>
                 <div class="php">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/php-icon.svg" alt="">
                 </div>
                 <div class="WordPress">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/wordpress-icon.svg" alt="">
                 </div>
                 <div class="electron">
-                    <img src="https://placehold.co/80x80" alt="">
+                    <img src="/src/assets/electronjs-icon.svg" alt="">
                 </div>
             </div>
         </div>
@@ -49,6 +49,7 @@
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 .devStack, .socials{
     text-align: center;
@@ -58,5 +59,11 @@
     }
 }
 
+.socialsList img, .devStack img{
+    max-width: 80px;
+    max-height: 80px;
+    width: 100%;
+    height: 100%;
+}
 
 </style>

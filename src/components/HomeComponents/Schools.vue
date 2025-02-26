@@ -14,25 +14,34 @@
             <div class="sc-logo-cont">
                 <div class="College" :class="{active: activeSchool === 'College'}" @click="setActive('College')" >
                     <div class="sc-logo">
-                        <img src="https://placehold.co/100x100" alt="elementary logo">
+                        <img src="/src/assets/cit.webp" alt="elementary logo">
                     </div>
                 </div>
                 <div class="HS" :class="{active: activeSchool === 'hs'}" @click = "setActive('hs')">
                     <div class="sc-logo">
-                        <img src="https://placehold.co/100x100" alt="elementary logo">
-                        <img src="https://placehold.co/100x100" alt="elementary logo">
+                        <img src="/src/assets/cctc.webp" alt="elementary logo">
+                        <img src="/src/assets/wblc.webp" alt="elementary logo">
                     </div>
                 </div>
                 <div class="elementary" :class="{active: activeSchool === 'elementary'}" @click = "setActive('elementary')">
                     <div class="sc-logo">
-                        <img src="https://placehold.co/100x100" alt="elementary logo">
+                        <img src="/src/assets/cctc.webp" alt="elementary logo">
                     </div>
                 </div>
             </div>
             <div class="descriptions">
                 <div v-if="activeSchool === 'College'"  class="College sc-description ">
-                    <h2>College</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ea nostrum veritatis cumque aperiam, porro, numquam aut quisquam incidunt dolor nobis quae deleniti! Laborum vel praesentium quam provident magni?</p>
+                    <h2>Cebu Institute of Technology-University <span>(CIT-U)</span></h2>
+                    <p>I hold a Bachelor's degree in Electronics and Communication Engineering with a foundation in robotics and automation. As a front-end developer, I am passionate about programming and aspire to grow in software and full-stack development.</p>
+                    <p class="skills">Skills Acquired</p>
+                    <ul>
+                        <li>python</li>
+                        <li>arduino</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>ElctroPnuematics</li>
+                        <li>PCB creation</li>
+                    </ul>
                 </div>
                 <div v-if="activeSchool === 'hs'"  class="HS sc-description ">
                     <h2>HS</h2>
@@ -48,6 +57,12 @@
 </template>
 
 <style scoped>
+    .schools{
+        align-content: center;
+    }
+    .skills{
+        text-align: center;
+    }
     .sc-logo-cont > div{
         position: relative;
         cursor: pointer;
@@ -61,6 +76,13 @@
         top: 50%;
         transform: translateY(-50%) rotate(136deg);
         z-index: -1;
+    }
+    .descriptions h2{
+        font-weight: 700;
+        text-align: center;
+    }
+    .descriptions h2 span{
+        display: block;
     }
     .sc-description{
         background-color: #333;
@@ -87,6 +109,8 @@
         max-width: fit-content;
         max-height: 80px;
         border-radius: 50%;
+        max-width: 80px;
+        max-height: 80px;
     }
     .sc-logo:has(> img:nth-child(2)) img:nth-child(2){
         margin-top: -50px;
@@ -94,5 +118,8 @@
     }
     .hidden{
         display: none;
+    }
+    .descriptions ul{
+        columns: 2;
     }
 </style>
