@@ -36,6 +36,6 @@ const items = [
     margin: auto;
 }
 .projectListsView > div{
-  max-width: 33cqw;
+  max-width: 40%;
 }
 </style>
