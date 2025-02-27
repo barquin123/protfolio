@@ -60,6 +60,7 @@ function handleActiveStateChange(activeState){
       backdrop-filter: blur(5px);
       transition: all 0.5s ease;
       filter: grayscale(1);
+      align-content: center;
     }
     .hide{
         display: none;
@@ -71,6 +72,7 @@ function handleActiveStateChange(activeState){
         max-height: 90%;
         filter: grayscale(0);
         margin: auto;
+        align-content: unset;
     }
     .experiences{
         max-width: 45%;

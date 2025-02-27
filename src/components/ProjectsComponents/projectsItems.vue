@@ -14,7 +14,7 @@ defineProps({
             <a :href="status === 'Coming Soon' ? '#' : projectLink" :target="status === 'Coming Soon' ? '' : '_blank'" :class="{ disabled: status === 'Coming Soon' }">
             <h1>{{ title }}</h1>
             <figure>
-                <img :src="projectImage" alt="ProjectImage">
+                <img class="projectImage" :src="projectImage" alt="ProjectImage" loading="lazy" width="450" height="450">
                 <figcaption v-if = "status == 'Coming Soon'">{{ status }}</figcaption>
             </figure>
             <div class="techStack">
@@ -30,6 +30,11 @@ defineProps({
 <style scoped>
     figure{
         position: relative;
+    }
+    .projectImage{
+        max-width: 450px;
+        height: 450px;
+        object-fit: cover;
     }
     figcaption{
         position: absolute;

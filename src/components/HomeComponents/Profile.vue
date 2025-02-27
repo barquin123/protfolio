@@ -4,7 +4,7 @@
 <template>
     <div class="profile">
         <div class="profileImage">
-            <img src="../assets/profile.jpg" alt="profile image" width="150px" height="150px">
+            <img src="/src/assets/profile.webp" alt="profile image" width="150px" height="150px">
             <div class="bios">
                 <h2>Jay Frank Barquin</h2>
                 <p>Front-End Web Developer</p>
