@@ -100,24 +100,24 @@ import { RouterLink, RouterView } from 'vue-router'
 .fade-slide-enter-from {
   transform: translateX(100%);
   opacity: 0;
-  filter: blur(10px);
+  filter: blur(10px), grayscale(1);
 }
 
 .fade-slide-enter-to {
   transform: translateX(0);
   opacity: 1;
-  filter: blur(0px);
+  filter: blur(0px), grayscale(1);
 }
 
 .fade-slide-leave-from {
   transform: translateX(0);
   opacity: 1;
-  filter: blur(10px);
+  filter: blur(10px), grayscale(1);
 }
 
 .fade-slide-leave-to {
   transform: translateX(-100%);
   opacity: 0;
-  filter: blur(0px);
+  filter: blur(0px), grayscale(1);
 }
 </style>
