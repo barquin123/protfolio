@@ -82,7 +82,7 @@ function handleActiveStateChange(activeState){
     }
 
 
-    @media only screen and (max-width:1038px){
+    @media only screen and (max-width:1032px){
         .home > div {
             max-width: 90%;
             min-height: 45%;

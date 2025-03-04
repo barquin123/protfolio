@@ -11,7 +11,7 @@ defineProps({
 
 <template>
         <div class="projects glow-on-hover">
-            <a :href="status === 'Coming Soon' ? '#' : projectLink" :target="status === 'Coming Soon' ? '' : '_blank'" :class="{ disabled: status === 'Coming Soon' }">
+            <a :href="status === 'Coming Soon' ? '#' : projectLink" :target="status === 'Coming Soon' ? '' : '_blank'" :class="{ disabled: status === 'Coming Soon' }" draggable="false">
             <h1>{{ title }}</h1>
             <figure>
                 <img class="projectImage" :src="projectImage" alt="ProjectImage" loading="lazy" width="450" height="450">
@@ -120,5 +120,23 @@ defineProps({
     max-height: 50px;
     width:100%;
     height:100%;
+}
+
+@media only screen and (max-width:1032px){
+    .projectImage{
+        max-width: 100%;
+    }
+
+.glow-on-hover:before {
+    display: none !important;
+}
+
+.glow-on-hover:hover:before {
+    display: none !important;
+}
+
+.glow-on-hover:after {
+    display: none !important;
+}
 }
 </style>

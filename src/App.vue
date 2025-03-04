@@ -123,7 +123,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 @media only screen and (max-width:1032px){
   main{
-    padding-bottom: 65px;
+    padding-bottom: 100px;
   }
 }
 </style>

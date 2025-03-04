@@ -250,5 +250,11 @@ li{
     .CompImages li:nth-child(2) span{
         top: -133px;
     }
+    .CompImages li.active{
+        margin-top: 39px;
+    }
+    .CompImages li:nth-child(2).active{
+        margin-top: 138px;
+    }
 }
 </style>
