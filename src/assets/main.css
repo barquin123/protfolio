@@ -71,7 +71,8 @@ a,
       width: 100%;
       height: 10vh;
       bottom: 0;
-  
+      backdrop-filter: none;
+      background: #13392c;
       nav{
         flex-direction: row;
         padding: 0;
