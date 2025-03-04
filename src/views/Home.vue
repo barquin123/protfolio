@@ -3,13 +3,13 @@ import profile from '../components/HomeComponents/Profile.vue'
 import experiences from '../components/HomeComponents/Experiences.vue'
 import schools from '../components/HomeComponents/Schools.vue'
 import socmed from '../components/HomeComponents/Socmed.vue'
-
-
+import { ref } from 'vue'
 function handleActiveStateChange(activeState){
     const profileElement = document.querySelector('.profile');
     const schoolsElement = document.querySelector('.schools');
     const socmedElement = document.querySelector('.socMed');
-    if (activeState){
+    const windowWidth = ref(window.innerWidth);
+    if (activeState && windowWidth.value >= 1039) {
         profileElement?.classList.add('hide');
         schoolsElement?.classList.add('hide');
         socmedElement?.classList.add('hide');

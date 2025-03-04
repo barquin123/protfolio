@@ -22,10 +22,13 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize);
 });
 
+const screenWidth = ref(window.innerWidth);
+
 const isAnyActive = computed(() => {
-    const activeState = !!compName.value;
-    emit('updateActiveState', activeState);
-    return activeState;
+        const activeState = !!compName.value;
+        emit('updateActiveState', activeState);
+        return activeState;
+  
 });
 
 </script>
@@ -236,7 +239,7 @@ li{
   filter: blur(0px);
 }
 
-@media only screen and (max-width:1038px){
+@media only screen and (max-width:1032px){
     .CompImages li{
         width: 30%;
         margin-top: 40px

@@ -123,7 +123,7 @@
         columns: 2;
     }
 
-    @media only screen and (max-width:1038px){
+    @media only screen and (max-width:1032px){
         .sc-flex-det{
             flex-direction: column;
         }

@@ -121,7 +121,7 @@ import { RouterLink, RouterView } from 'vue-router'
   filter: blur(0px), grayscale(1);
 }
 
-@media only screen and (max-width:1038px){
+@media only screen and (max-width:1032px){
   main{
     padding-bottom: 65px;
   }
