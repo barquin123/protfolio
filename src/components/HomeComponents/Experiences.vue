@@ -38,7 +38,7 @@ const isAnyActive = computed(() => {
         <div :class="['experiences', { active: isAnyActive }]">
             <h1 v-if="compName === 'insystic'">Insystic Corp. <br> (Site Engineer)</h1>
             <h1 v-else-if="compName === 'proweaver'">ProWeaver Inc.<br> (Front-End Web Developer)</h1>
-            <h1 v-else-if="compName === 'FDCI'">Forty Degrees Celcius Inc.</h1>
+            <h1 v-else-if="compName === 'FDCI'">Forty Degrees Celcius Inc.<br>(IT Professional)</h1>
             <h1 v-else>Work Experiences</h1>
             <div class="TimeLine">
                 <ul class="CompImages">
@@ -66,6 +66,7 @@ const isAnyActive = computed(() => {
                         <li>Integrated Service Delivery Platform (ISDP)<br> Qualification and certification</li>
                         <li>Safety and emergency protocols</li>
                     </ul>
+                    <div id="endExp"></div>
                 </div>
                 </Transition>
                 <Transition name="fade" mode="out-in">
@@ -84,12 +85,25 @@ const isAnyActive = computed(() => {
                         <li>Elementor</li>
                         <li>DIVI</li>
                     </ul>
+                    <div id="endExp"></div>
                 </div>
                 </Transition>
                 <Transition name="fade" mode="in-out">
                 <div v-if="compName == 'FDCI'" class="FDCI">
-                    <h2>Forty Degrees</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ea nostrum veritatis cumque aperiam, porro, numquam aut quisquam incidunt dolor nobis quae deleniti! Laborum vel praesentium quam provident magni?</p>
+                    <p>As a Front-End Web Developer at FORTY DEGREES CELSIUS, INC., I convert design prototypes into responsive web pages, fix bugs, and investigate design inconsistencies. I collaborate with teams to ensure smooth user experiences and contribute to tasks like web translation, system analysis, and programming for foreign clients.</p>
+                    <p class="skills">Skills Acquired</p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>GIT/GITHUB</li>
+                        <li>HTML, CSS, JS</li>
+                        <li>VUE</li>
+                        <li>Angular</li>
+                        <li>MVC</li>
+                        <li>React</li>
+                        <li>ExpressJS</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <div id="endExp"></div>
                 </div>
             </Transition>
             </div>
@@ -124,6 +138,7 @@ ul{
     margin: 0;
     padding: 0;
 }
+.endExp{display: none;}
 li{
     list-style: none;
     
@@ -138,6 +153,7 @@ li{
     margin: auto;
     border: 1px solid #fff;
     padding: 20px 50px;
+    column-gap: 50px;
 }
 .CompImages img{
     border-radius: 50%;
@@ -148,7 +164,7 @@ li{
     height: 100%;
 }
 .CompImages li{
-    margin-top: 30px;
+    margin-top: 0;
     position: relative;
     text-align: center;
     transition: opacity 0.5s ease;
@@ -156,7 +172,7 @@ li{
     cursor: pointer;
 }
 .CompImages li.active{
-    margin-top: 14px;
+    margin-top: 0px;
     position: relative;
     text-align: center;
 }
@@ -166,12 +182,12 @@ li{
     top: 30px;
 }
 .CompImages li:nth-child(2) span{
-    top: -110px;
+    top: -118px;
 }
 .CompImages li::before{
     content: '';
     position: absolute;
-    top: 38%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 2px;
@@ -184,13 +200,12 @@ li{
     top:-12%;
 }
 .CompImages li:nth-child(2){
-    margin-top: 110px;
+    margin-top: 89px;
 }
 .CompImages{
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
-    flex-wrap: wrap;
     height: 100%;
     width: 100%;
     align-content: center;
@@ -242,19 +257,23 @@ li{
 @media only screen and (max-width:1032px){
     .CompImages li{
         width: 30%;
-        margin-top: 40px
+        margin-top: 0px
     }
     .CompImages li:nth-child(2){
-        margin-top: 140px
+        margin-top: 87px
     }
     .CompImages li:nth-child(2) span{
         top: -133px;
     }
     .CompImages li.active{
-        margin-top: 39px;
+        margin-top: 0px;
     }
     .CompImages li:nth-child(2).active{
-        margin-top: 138px;
+        margin-top: 87px;
+    }
+    .endExp{display: block;}
+    .workDetails ul{
+        column-count: 1;
     }
 }
 </style>

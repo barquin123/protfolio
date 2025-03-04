@@ -18,9 +18,18 @@ function handleActiveStateChange(activeState){
             profileElement?.classList.remove('hide');
             schoolsElement?.classList.remove('hide');
             socmedElement?.classList.remove('hide');
+            scrollToID();
         }, 500);
     }
 }
+
+function scrollToID() {
+            const element = document.getElementById('endExp');
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' // Scroll to the top of the element
+            });
+        }
 </script>
 
 <template>
@@ -90,6 +99,9 @@ function handleActiveStateChange(activeState){
         }
         .home{
             height: auto;
+        }
+        .experiences.active {
+            padding: 20px 20px;
         }
     }
 </style>
