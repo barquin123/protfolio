@@ -115,4 +115,10 @@ defineProps({
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+.techImages img{
+    max-width: 50px;
+    max-height: 50px;
+    width:100%;
+    height:100%;
+}
 </style>

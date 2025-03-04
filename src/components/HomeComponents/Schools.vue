@@ -44,12 +44,12 @@
                     </ul>
                 </div>
                 <div v-if="activeSchool === 'hs'"  class="HS sc-description ">
-                    <h2>HS</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ea nostrum veritatis cumque aperiam, porro, numquam aut quisquam incidunt dolor nobis quae deleniti! Laborum vel praesentium quam provident magni?</p>
+                    <h2>Consolatrix College & West Bay Learning Center</h2>
+                    <p>High School taught me the importance of collaboration and understanding different personalities. I learned to respect others' perspectives, value their decisions, and embrace the importance of patience in achieving meaningful progress.</p>
                 </div>
                 <div v-if="activeSchool === 'elementary'" class="elementary sc-description ">
-                    <h2>Elementary</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam ea nostrum veritatis cumque aperiam, porro, numquam aut quisquam incidunt dolor nobis quae deleniti! Laborum vel praesentium quam provident magni?</p>
+                    <h2>Consolatrix College of Toledo City Cebu</h2>
+                    <p>I developed proper manners and learned how to handle various situations with grace. I gained an understanding of showing respect to everyone, regardless of status, and cultivated strong morals and ethical conduct in my interactions with others.</p>
                 </div>
             </div>
         </div>
@@ -121,5 +121,26 @@
     }
     .descriptions ul{
         columns: 2;
+    }
+
+    @media only screen and (max-width:1038px){
+        .sc-flex-det{
+            flex-direction: column;
+        }
+        .sc-logo-cont{
+            flex-direction: row;
+        }
+        .sc-logo-cont div.active::before{
+            position: absolute;
+            content: "";
+            background: #333;
+            border: solid 10px #333;
+            bottom: -30px;
+            transform: translateX(-50%) rotate(136deg);
+            z-index: -1;
+            top: unset;
+            left: 50%;
+            width: 0;
+        }
     }
 </style>

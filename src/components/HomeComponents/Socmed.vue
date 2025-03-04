@@ -21,22 +21,22 @@
             <h2>Tech Stack</h2>
             <div class="techStackList">
                 <div class="vue">
-                    <img src="/src/assets/logo.svg" alt="">
+                    <img src="/src/assets/vue-9.svg" alt="VueJs">
                 </div>
                 <div class="react">
-                    <img src="/src/assets/react-2.svg" alt="">
+                    <img src="/src/assets/react-2.svg" alt="ReactJS">
                 </div>
                 <div class="tailwind">
-                    <img src="/src/assets/tailwindcss-icon.svg" alt="">
+                    <img src="/src/assets/tailwindcss-icon.svg" alt="Tailwind CSS">
                 </div>
                 <div class="php">
-                    <img src="/src/assets/php-icon.svg" alt="">
+                    <img src="/src/assets/php-icon.svg" alt="PHP">
                 </div>
                 <div class="WordPress">
-                    <img src="/src/assets/wordpress-icon.svg" alt="">
+                    <img src="/src/assets/wordpress-icon.svg" alt="WordPress">
                 </div>
                 <div class="electron">
-                    <img src="/src/assets/electronjs-icon.svg" alt="">
+                    <img src="/src/assets/electronjs-icon.svg" alt="ElectronJS">
                 </div>
             </div>
         </div>

@@ -120,4 +120,10 @@ import { RouterLink, RouterView } from 'vue-router'
   opacity: 0;
   filter: blur(0px), grayscale(1);
 }
+
+@media only screen and (max-width:1038px){
+  main{
+    padding-bottom: 65px;
+  }
+}
 </style>

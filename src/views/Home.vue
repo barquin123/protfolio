@@ -73,10 +73,23 @@ function handleActiveStateChange(activeState){
         filter: grayscale(0);
         margin: auto;
         align-content: unset;
+        padding: 20px 50px;
     }
     .experiences{
         max-width: 45%;
         min-height: 45%;
         transition: all 0.5s ease;
+    }
+
+
+    @media only screen and (max-width:1038px){
+        .home > div {
+            max-width: 90%;
+            min-height: 45%;
+            filter: grayscale(0);
+        }
+        .home{
+            height: auto;
+        }
     }
 </style>
