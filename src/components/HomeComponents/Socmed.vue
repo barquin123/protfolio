@@ -6,6 +6,9 @@
         <div class="socials">
             <h2>Socials</h2>
             <div class="socialsList">
+                <div class="social github">
+                    <a href="https://github.com/barquin123" target="_blank"><img src="/src/assets/github-icon.svg" alt="github"></a>
+                </div>
                 <div class="social">
                     <a href="mailto:jay.barquin2000@gmail.com"><img src="/src/assets/Gmail-logo.webp" alt="gmail"></a>
                 </div>
@@ -64,6 +67,10 @@
     max-height: 80px;
     width: 100%;
     height: 100%;
+}
+.social.github img {
+    background: #fff;
+    border-radius: 50%;
 }
 
 </style>

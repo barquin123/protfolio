@@ -36,7 +36,6 @@
         margin: auto;
         margin-top: auto;
         max-width: fit-content;
-        margin-top: 30px;
         text-decoration: none;
         color: #fff;
         border: 1px solid #fff;

@@ -32,7 +32,7 @@ defineProps({
         position: relative;
     }
     .projectImage{
-        max-width: 450px;
+        max-width:100%;
         height: 450px;
         object-fit: cover;
     }
@@ -54,6 +54,9 @@ defineProps({
     }
     .techImages{
         text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
     a{
         text-decoration: none;

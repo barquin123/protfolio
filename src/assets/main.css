@@ -37,6 +37,8 @@ a,
 #app{
   display: flex;
   background: url('');
+  scrollbar-color: #555 transparent;
+  scrollbar-width: thin;
   header{
     position: relative;
     z-index: 10;
