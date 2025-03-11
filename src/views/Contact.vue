@@ -7,6 +7,7 @@ import { ref } from 'vue'
 <template>
     <div class="contact">
         <socmed />
+        <h2>*This form is currently under development and not yet functional.</h2>
         <Contactform />
     </div>
 </template>
@@ -15,5 +16,14 @@ import { ref } from 'vue'
 .contact {
     align-content: center;
     height: 100%;
+}
+h2 {
+    font-weight: 700;
+    color: #bc0e0e;
+    background: #521c1c;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: 1px solid #bc0e0e;
 }
 </style>
