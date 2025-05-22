@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+### Site
+
+```sh
+https://barquin-portfolio.netlify.app/
