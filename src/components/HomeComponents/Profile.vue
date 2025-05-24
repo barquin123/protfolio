@@ -12,7 +12,7 @@
         </div>
     <div class="profileDescripton">
         <p>I'm a frontend web developer with a passion for coding, problem-solving, and building intuitive projects that simplify life—whether for myself or others. Aspiring to become a full-stack/software developer, I thrive on creating efficient and user-friendly digital solutions.</p>
-        <a class="cv-btn" href="javascript:void(0)">Download CV</a>
+        <a class="cv-btn" href="/src/assets/Barquin-CV.pdf" target="_blank" download>Download CV</a>
     </div>
     </div>
 </template>
@@ -40,6 +40,7 @@
         color: #fff;
         border: 1px solid #fff;
         transition: all 0.5s ease;
+        margin-top: 15px;
     }
 
     .cv-btn:hover {
